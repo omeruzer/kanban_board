@@ -15,9 +15,9 @@ class TaskRepository {
   }
   async findStatusAll(status: string): Promise<Task[]> {
     var queryStatus = "";
-    if ((status == "todo")) {
+    if (status == "todo") {
       queryStatus = "To Do";
-    } else if ((status == "inprogress")) {
+    } else if (status == "inprogress") {
       queryStatus = "In Progress";
     } else {
       queryStatus = "Done";

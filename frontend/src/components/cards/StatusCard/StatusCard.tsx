@@ -50,8 +50,8 @@ export default function StatusCard({ title, status }: StatusCardProps) {
   return (
     <div
       ref={drop}
-      className={`bg-white shadow-md cursor-pointer px-3 w-72 rounded-md ${
-        isOver ? "bg-gray-200" : ""
+      className={` shadow-md cursor-pointer px-3 w-72 rounded-md ${
+        isOver ? "bg-gray-200" : "bg-white"
       }`}
     >
       <div className="pt-4 pb-2 border-b border-gray-300 mb-2">
