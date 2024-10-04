@@ -1,0 +1,25 @@
+
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app 
+      - /app/node_modules 
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URL: mongodb+srv://omer:asd123@nodeblog.4aasp.mongodb.net/task-managment?retryWrites=true&w=majority
+      PORT: 3000
+    restart: always
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3001:80"
+    restart: always
+    
